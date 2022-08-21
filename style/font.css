@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aquarius';
+    src: url('fonts/Aquarius.eot');
+    src: url('fonts/Aquarius.eot') format('embedded-opentype'),
+         url('fonts/Aquarius.woff2') format('woff2'),
+         url('fonts/Aquarius.woff') format('woff'),
+         url('fonts/Aquarius.ttf') format('truetype'),
+         url('fonts/Aquarius.svg#Aquarius') format('svg');
+}

@@ -1,0 +1,118 @@
+/* Google Font Use==> poppins */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset/Common Css Style Start=====> */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:  none;
+    text-decoration: none;
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+:root{
+    --whie-color: #ffff;
+    --black-color: #000000;
+    --background-color: #dde1e7;
+
+    --box-shadow: -3px -3px 7px #ffffff73,
+                    2px 2px 5px rgba(94, 104, 121, 0.288);
+    --button-box-shadow:  2px 2px 5px #babecc,
+                    -5px -5px 10px #ffffff73;
+    --btnfocus-box-shadow: inset 2px 2px 5px #babecc,
+                            inset -5px -5px 10px #ffffff73;
+}
+
+/* Header Desgin====> */
+.ne-effect{
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--background-color);
+    padding: 8px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+}
+.icons:hover{
+    box-shadow: var(--btnfocus-box-shadow);
+    transition: 0.6s;
+}
+.btns{
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    transition: 0.4s;
+}
+.btns:hover{
+    box-shadow: var(--btnfocus-box-shadow);
+    transition: 0.6s;
+}
+.navbar-toggler{
+    border: none !important;
+    color: var(--black-color);
+    outline: none;
+}
+.navbar-toggler:focus{
+    outline: none !important;
+    text-decoration: none;
+    border: none !important;
+}
+.prev-icons {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    color: black;
+    margin-left: -5rem;
+}
+.prev-icons:hover {
+    background-color: var(--background-color);
+    box-shadow: var(--btnfocus-box-shadow);
+}
+.nex-icons {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    color: black;
+    margin-left: 5rem;
+}
+.nex-icons:hover {
+    background-color: var(--background-color);
+    box-shadow: var(--btnfocus-box-shadow);
+}
+.carousel-control-prev{
+    background-color: none;
+}
+.heading-text{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.note{
+    font-family: 'Aquarius';
+}
+.slider-area{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    max-height: 100%;
+    background-color: red !important;
+}
+.slider-details{
+    padding: 15vh 0vh;
+}
+
+/* Header Desgin End====> */
