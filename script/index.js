@@ -32,6 +32,18 @@ document.getElementById('player-cost').addEventListener('click', function(){
 
 document.getElementById('total-cost').addEventListener('click', function(){
     const getTrainFieldValue = getInputValues('tainer-cost-field');
-    const getTrainFieldValue = getInputValues('tainer-cost-field');
-    alert(getTrainFieldValue);
+    const getCoachFieldValue = getInputValues('coach-cost-field');
+    const getTCValue = getPlusAmount(getTrainFieldValue , getCoachFieldValue); // Extra Cost Total
+
+
+    const getPlayerTotalValue = getElementText('player-total-cost');
+
+    const getTotalCost = getPlusAmount(getPlayerTotalValue , getTCValue);
+
+    const getTeamTotalCost = document.getElementById('total-team-cost');
+    const getTeamValus = getElementText('total-team-cost');
+    const finalTotalCost = getPlusAmount(getTeamValus , getTotalCost);
+    getTeamTotalCost.innerText = finalTotalCost;
+
+    alert(finalTotalCost);
 })
