@@ -13,14 +13,21 @@ function showDisplay(playerName) {
         tr.innerHTML = `
         <th>${i + 1}</th>
         <td>${playerName}</td>`;
-        tablebody.appendChild(tr);
-
+        
+        
+            if (playerArray.length > 5) {
+                alert('Max Player Selected');
+                break;
+            }else{
+                tablebody.appendChild(tr);
+                
+            }
+        }
+        
     }
-}
  
 function selectedPlayer(element) {
     const getPlayerName = element.parentNode.parentNode.children[0].innerText;
-
     const namesobj ={
         getPlayerName: getPlayerName
     } 
@@ -28,11 +35,14 @@ function selectedPlayer(element) {
     playerArray.push(namesobj);
 
     document.getElementById('updated-value-element').innerText = playerArray.length;
-    showDisplay(playerArray);
 
 
-    if (playerArray.length === 5) {
-        const getAllbutton = document.getElementsByClassName('btns');
-        getAllbutton(this).setAttribute
+    if (playerArray.length > 5){ 
+        alert('Player Success Fully Selcted & Button Are Disable');
+        const getBoxElemet = document.getElementById('updated-value-element');
+        getBoxElemet.style.display = 'none';
+        return;
     }
+    showDisplay(playerArray);
 }
+
