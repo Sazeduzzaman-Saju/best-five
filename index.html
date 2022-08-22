@@ -134,7 +134,7 @@
                           <p class="ms-5 text-danger">331 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/argentina.png" class="img-fluid fa-fade" alt="">
@@ -155,7 +155,7 @@
                           <p class="ms-5 text-danger">273 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/portugal.png" class="img-fluid fa-fade" alt="">
@@ -176,7 +176,7 @@
                           <p class="ms-5 text-danger">000 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/poland.png" class="img-fluid fa-fade" alt="">
@@ -197,7 +197,7 @@
                           <p class="ms-5 text-danger">018 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/brazil.png" class="img-fluid fa-fade" alt="">
@@ -218,7 +218,7 @@
                           <p class="ms-5 text-danger">273 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/france.png" class="img-fluid fa-fade" alt="">
@@ -239,7 +239,7 @@
                           <p class="ms-5 text-danger">101 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons ">
                               <img src="img/country/belgium.png" class="img-fluid fa-fade" alt="">
@@ -260,7 +260,7 @@
                           <p class="ms-5 text-danger">036 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/norway.png" class="img-fluid fa-fade" alt="">
@@ -281,7 +281,7 @@
                           <p class="ms-5 text-danger">083 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/egypt.png" class="img-fluid fa-fade" alt="">
@@ -302,7 +302,7 @@
                           <p class="ms-5 text-danger">198 Assist</p>
                         </div>
                         <div class="review-section d-flex justify-content-between align-item-center">
-                          <button class="btns fw-semibold text-uppercase rounded">Select</button>
+                          <button onclick="selectedPlayer(this)"class="btns fw-semibold text-uppercase rounded">Select</button>
                           <div class="social d-flex justify-content-center align-items-center ">
                             <div class="icons">
                               <img src="img/country/netherlands.png" class="img-fluid fa-fade" alt="">
@@ -317,20 +317,18 @@
             <div class="col-lg-3 col-md-3 col-sm-12">
               <!-- Action Area -->
               <div class="add-player ne-effect mt-1">
-                <h2 class="text-center pt-3 note mb-4">Selected V</h2>
+                <h2 class="text-center pt-3 note mb-4">Selected <span class="text-danger" id="updated-value-element">0</span></h2>
                 <div class="card ne-effect border-0 bg-transparent">
-                  <ul class="list-group list-group-flush ">
-                    <li class="list-group-item">1. <span>Messi</span>
-                    </li>
-                    <li class="list-group-item">2. <span>Messi</span>
-                    </li>
-                    <li class="list-group-item">3. <span>Messi</span>
-                    </li>
-                    <li class="list-group-item">4. <span>Messi</span>
-                    </li>
-                    <li class="list-group-item">5. <span>Messi</span>
-                    </li>
-                  </ul>
+                      <table class="table ">
+                        <thead>
+                        </thead>
+                        <tbody id="display-player-name">
+                          <tr>
+                            <th>1</th>
+                            <td>Leonel Messi</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
               </div>
               <div class="costing-area mt-5">
@@ -407,5 +405,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Js Link -->
     <script src="script/index.js"></script>
+    <script src="script/playerSelect.js"></script>
   </body>
 </html>
