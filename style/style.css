@@ -12,6 +12,9 @@
     font-family: 'Poppins', sans-serif;
     
 }
+body{
+    background-color: var(--background-color);
+}
 
 :root{
     --whie-color: #ffff;
@@ -46,6 +49,10 @@
 .icons:hover{
     box-shadow: var(--btnfocus-box-shadow);
     transition: 0.6s;
+}
+.social-icon{
+    text-decoration: none;
+    color: var(--black-color);
 }
 .btns{
     padding: 10px 20px;
@@ -115,3 +122,30 @@
 }
 
 /* Header Desgin End====> */
+/* Action Area===> */
+input {
+    padding: 8px 12px;
+    width: 160px;
+    max-width: 100%;
+    border: none;
+    background-color: rgb(196, 187, 187);
+    border-radius: 30px;
+    box-shadow: var(--btnfocus-box-shadow);
+}
+input:focus{
+    box-shadow: var(--btnfocus-box-shadow);
+}
+.list-group-item {
+    background-color: var(--background-color);
+    position: relative;
+    display: block;
+    padding: none;
+    color: var(--black-color);
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+}
+.list-group-item:hover {
+box-shadow: var(--btnfocus-box-shadow);
+}
+/* Action Area End===> */   
