@@ -337,21 +337,22 @@
                 <div class="mb-3 pt-4 pb-3 ne-effect p-2">
                   <h2 class="text-center mb-4 note">Budget</h2>
                   <label for="ticketNum">Player</label>
-                  <input id="ticketNum " class="mb-2 ne-effect fw-semibold" type="number" name="ticketNum" placeholder="৳0">
+                  <input id="player-cost-field" class="mb-2 ne-effect fw-semibold" type="number" name="ticketNum" placeholder="৳0">
                   <div class=" d-flex justify-content-center align-items-center">
-                    <button class="btns fw-semibold text-uppercase rounded mt-3">Calculate</button>
+                    <button id="player-cost" class="btns fw-semibold text-uppercase rounded mt-3">Player Cost</button>
                   </div>
-                  <h6 class="mt-5 text-center mb-3">Player Expense ৳ <span class="text-danger">5000</span>
+                  <h6 class="mt-5 text-center mb-3">Player Expense ৳ <span id="player-total-cost" class="text-danger">0</span>
                   </h6>
-                  <label for="ticketNum">Mana.</label>
-                  <input id="ticketNum " class="mb-2 ne-effect fw-semibold mb-3" type="number" name="ticketNum" placeholder="৳0">
+                  <label for="tainer-cost-field">Traine</label>
+                  <input id="tainer-cost-field" class="mb-2 ne-effect fw-semibold mb-3" type="number" name="ticketNum" placeholder="৳0">
                   <br>
-                  <label for="ticketNum">Coach</label>
-                  <input id="ticketNum " class="mb-2 ne-effect fw-semibold " type="number" name="ticketNum" placeholder="৳0">
+                  <label for="coach-cost-field">Coach</label>
+                  <input id="coach-cost-field" class="mb-2 ne-effect fw-semibold " type="number" name="ticketNum" placeholder="৳0">
+                  <!-- <h6 class="mt-3">Extra Cost ৳ <span class="text-danger" id="extra-cost">0</span></h6> -->
                   <div class=" d-flex justify-content-center align-items-center">
-                    <button class="btns fw-semibold text-uppercase rounded mt-3">Calculate</button>
+                    <button id="total-cost" class="btns fw-semibold text-uppercase rounded mt-3">Total Cost</button>
                   </div>
-                  <h6 class="mt-5 text-center">Total Team Cost ৳ <span class="text-danger">5000</span>
+                  <h6 class="mt-5 text-center">Total Team Cost ৳ <span id="total-team-cost" class="text-danger">0</span>
                   </h6>
                 </div>
               </div>
