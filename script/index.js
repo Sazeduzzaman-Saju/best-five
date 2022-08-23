@@ -3,11 +3,7 @@ function getInputValues(inputValue) {
     const getInputElement = document.getElementById(inputValue);
     const getInputValue = getInputElement.value;
     const convertInputValue = parseInt(getInputValue);
-
-
-
     return convertInputValue;
-
 }
 //Genarate InnerText To Number
 function getElementText(elementId) {
@@ -22,24 +18,25 @@ function getPlusAmount(a , b) {
     const total =  a + b;
     return total;
 }
-function geEroor(inputValue) {
-    if (inputValue.value == null) {
-        alert('disable')
-        return getInputValues();
+function ifFieldEmpty(inputField) {
+    if (inputField.value == '') {
+        alert('Type Valid Number Please Reload The Page ')
+        return;
     }
-    return inputValue;
 }
+
 
 document.getElementById('player-cost').addEventListener('click', function(){
     const playerInputCost = getInputValues('player-cost-field'); // Player Cost Input Field 1000
     const playerElementCost =  getElementText('player-total-cost'); // Total Player Cost Element
+    document.getElementById('updated-value-element').innerText = playerArray.length;
     
-    const getPlayerCost = playerInputCost * 5; // Total Player Cost
-    
-    const getPlayerTotalCost = document.getElementById('player-total-cost');
-    const getplayerCostAmount = getPlusAmount(playerElementCost , getPlayerCost) 
-    getPlayerTotalCost.innerText = getplayerCostAmount;// Displaye Player Total Cost
+    const getPlayerCost = playerInputCost * playerArray.length;
+     // Total Player Cost
 
+    const getPlayerTotalCost = document.getElementById('player-total-cost');
+    const getplayerCostAmount = getPlusAmount(playerElementCost , getPlayerCost);
+    getPlayerTotalCost.innerText = getplayerCostAmount;// Displaye Player Total Cost
 })
 
 document.getElementById('total-cost').addEventListener('click', function(){
@@ -57,7 +54,20 @@ document.getElementById('total-cost').addEventListener('click', function(){
     const finalTotalCost = getPlusAmount(getTeamValus , getTotalCost);
     getTeamTotalCost.innerText = finalTotalCost;
 
-    geEroor(getPlayerTotalValue);
+})
+
+document.getElementById('player-cost').addEventListener('click', function(){
+    const getPlayerCostField = document.getElementById('player-cost-field');
+    const getPlayerField = ifFieldEmpty(getPlayerCostField);
 
 })
+document.getElementById('total-cost').addEventListener('click', function(){
+    const getTrainerCostField = document.getElementById('tainer-cost-field');
+    const getTaineField = ifFieldEmpty(getTrainerCostField);
+})
+// document.getElementById('total-cost').addEventListener('click', function(){
+//     const getTrainerCostField = document.getElementById('coach-cost-field');
+//     const getTaineField = ifFieldEmpty(getTrainerCostField);
+// })
+
 

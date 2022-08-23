@@ -1,31 +1,29 @@
 let playerArray = [];
 
-function showDisplay(playerName) {
+function showDisplay(inputArry) {
 
     const tablebody = document.getElementById('display-player-name');
     tablebody.innerHTML = '';
-    for (let i = 0; i < playerName.length; i++) {
-
-        const playerName = playerArray[i].getPlayerName;
-
+    for (let i = 0; i < inputArry.length; i++) {
+        const inputArry = playerArray[i].getPlayerName;
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
         <th>${i + 1}</th>
-        <td>${playerName}</td>`;
+        <td>${inputArry}</td>`;
         
         
             if (playerArray.length > 5) {
                 alert('Max Player Selected');
                 break;
             }else{
-                tablebody.appendChild(tr);
-                
+                tablebody.appendChild(tr); 
             }
         }
-        
+
     }
- 
+
+
 function selectedPlayer(element) {
     const getPlayerName = element.parentNode.parentNode.children[0].innerText;
     const namesobj ={
@@ -35,14 +33,23 @@ function selectedPlayer(element) {
     playerArray.push(namesobj);
 
     document.getElementById('updated-value-element').innerText = playerArray.length;
-
+    const getBoxElemet = document.getElementById('updated-value-element');
+    const getButton = document.getElementById('button');
 
     if (playerArray.length > 5){ 
         alert('Player Success Fully Selcted & Button Are Disable');
-        const getBoxElemet = document.getElementById('updated-value-element');
         getBoxElemet.style.display = 'none';
         return;
     }
     showDisplay(playerArray);
 }
 
+const boxes = document.querySelectorAll('.btns');
+
+boxes.forEach(box => {
+  box.addEventListener('click', function handleClick(event) {
+    console.log('box clicked', event);
+
+    box.setAttribute('style', 'display: none;');
+  });
+});
