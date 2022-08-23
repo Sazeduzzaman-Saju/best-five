@@ -29,10 +29,9 @@ function ifFieldEmpty(inputField) {
 document.getElementById('player-cost').addEventListener('click', function(){
     const playerInputCost = getInputValues('player-cost-field'); // Player Cost Input Field 1000
     const playerElementCost =  getElementText('player-total-cost'); // Total Player Cost Element
-    document.getElementById('updated-value-element').innerText = playerArray.length;
-    
-    const getPlayerCost = playerInputCost * playerArray.length;
-     // Total Player Cost
+
+    // Total Player Cost
+    const getPlayerCost = playerInputCost * 5;
 
     const getPlayerTotalCost = document.getElementById('player-total-cost');
     const getplayerCostAmount = getPlusAmount(playerElementCost , getPlayerCost);

@@ -12,13 +12,14 @@ function showDisplay(inputArry) {
         <th>${i + 1}</th>
         <td>${inputArry}</td>`;
         
-        
+        tablebody.appendChild(tr);
             if (playerArray.length > 5) {
                 alert('Max Player Selected');
                 break;
             }else{
-                tablebody.appendChild(tr); 
+                 
             }
+            
         }
 
     }
@@ -34,7 +35,7 @@ function selectedPlayer(element) {
 
     document.getElementById('updated-value-element').innerText = playerArray.length;
     const getBoxElemet = document.getElementById('updated-value-element');
-    const getButton = document.getElementById('button');
+
 
     if (playerArray.length > 5){ 
         alert('Maximum Player Are Selected');
