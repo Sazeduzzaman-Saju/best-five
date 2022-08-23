@@ -37,19 +37,22 @@ function selectedPlayer(element) {
     const getButton = document.getElementById('button');
 
     if (playerArray.length > 5){ 
-        alert('Player Success Fully Selcted & Button Are Disable');
+        alert('Maximum Player Are Selected');
         getBoxElemet.style.display = 'none';
         return;
     }
     showDisplay(playerArray);
 }
 
-const boxes = document.querySelectorAll('.btns');
+const buttons = document.querySelectorAll('.button-select');
 
-boxes.forEach(box => {
-  box.addEventListener('click', function handleClick(event) {
-    console.log('box clicked', event);
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
 
-    box.setAttribute('style', 'display: none;');
+    if (button.click) {
+        button.setAttribute('style', 'display: none;');
+    }
   });
 });
+
+

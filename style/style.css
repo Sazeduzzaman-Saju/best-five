@@ -12,9 +12,8 @@
     font-family: 'Poppins', sans-serif;
     
 }
-body{
-    background-color: var(--background-color);
-}
+
+
 
 :root{
     --whie-color: #ffff;
@@ -26,8 +25,30 @@ body{
                     -5px -5px 10px #ffffff73;
     --btnfocus-box-shadow: inset 2px 2px 5px #babecc,
                             inset -5px -5px 10px #ffffff73;
+    --secondary-background-color:  #DC3545;
 }
+/* Side Scrool Track Design */
 
+body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body {
+    scrollbar-width: bold;
+    scrollbar-color: var(--background-color);
+  }
+  body::-webkit-scrollbar-track {
+    background:var(--background-color);
+    box-shadow: var(--box-shadow);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color:var(--secondary-background-color);
+    border-radius: 6px;
+    /* box-shadow:  var(--btnfocus-box-shadow) */
+  }
+  
+body{
+    background-color: var(--background-color);
+}
 /* Header Desgin====> */
 .ne-effect{
     background-color: var(--background-color);
@@ -35,8 +56,8 @@ body{
 
 }
 .icons{
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 30px;
     background-color: var(--background-color);
     padding: 8px;
@@ -77,9 +98,9 @@ body{
 .prev-icons {
     background-color: var(--background-color);
     box-shadow: var(--box-shadow);
-    border-radius: 30px;
-    width: 35px;
-    height: 35px;
+    border-radius: 1.875rem;
+    width: 2.188rem;
+    height: 2.188rem;
     color: black;
     margin-left: -5rem;
 }
@@ -90,9 +111,9 @@ body{
 .nex-icons {
     background-color: var(--background-color);
     box-shadow: var(--box-shadow);
-    border-radius: 30px;
-    width: 35px;
-    height: 35px;
+    border-radius: 1.875rem;
+    width: 2.188rem;
+    height: 2.188rem;
     color: black;
     margin-left: 5rem;
 }
@@ -104,7 +125,7 @@ body{
     background-color: none;
 }
 .heading-text{
-    font-size: 50px;
+    font-size: 3.125rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -121,6 +142,7 @@ body{
 }
 
 /* Header Desgin End====> */
+
 /* Action Area===> */
 input {
     padding: 8px 12px;
@@ -147,5 +169,102 @@ input:focus{
 .list-group-item:hover {
 box-shadow: var(--btnfocus-box-shadow);
 }
+.fixed { 
+    height: 56.875rem;
+}
+.scrollit { 
+    height:43.75rem; overflow-y:scroll;
+    max-height: 100%;
+}
 
+
+scrollit::-webkit-scrollbar-track {
+    background-color:;
+    box-shadow: var(--btnfocus-box-shadow);
+    height: 0.313rem;
+  }
+  
+  .scrollit::-webkit-scrollbar {
+    width:0.5rem;
+  }
+  
+  .scrollit::-webkit-scrollbar-thumb {
+    border-radius: 0.625rem;
+    background-color: var(--secondary-background-color);
+  }
+  
 /* Action Area End===> */   
+/* Footer Area ===> */
+.about-area{
+    width: 250px;
+    font-size: 16px;
+    text-align: justify;
+}   
+.about-area p{
+    font-size: 14px;
+}  
+/* Action Area End===> */   
+
+
+/* Only For Extra Small Device */
+@media only screen and (max-width: 557px) {
+    .brand {
+      width: 80%;
+    }
+    .about-area{
+       text-align: center;
+    }
+    .foooter-logo {
+        padding-left: 3rem;
+        padding-bottom: 0rem;
+    }
+    .footer-cup ,.cup{
+        margin-top: 0rem !important;
+    }
+    .slider-area{
+        flex-direction: column-reverse!important;
+    }
+    .slider-image {
+        margin: 0rem !important;
+        padding-top: 2rem !important;
+    }
+    .costing-area-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        padding: 8px 12px;
+        width: 200px;
+        max-width: 100%;
+
+    }
+    .heading-text {
+        font-size: 2.125rem;
+    }
+    .slider-details {
+        padding-left: 0.825rem !important;
+    }
+  }
+  /* Only For Extra Small Device */
+@media only screen and (max-width: 999px) {
+    .fixed {
+        height: 100%;
+    }
+    .slider-details {
+        padding: 4vh 0vh;
+    }
+    .card-title{
+        font-size: 15px;
+    }
+    .scrollit {
+        height: 54.75rem;
+        max-width: 100%;
+        overflow-y: scroll;
+    }
+    .slider-area{
+        flex-direction: column-reverse!important;
+    }
+
+  }

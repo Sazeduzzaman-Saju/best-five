@@ -20,8 +20,8 @@ function getPlusAmount(a , b) {
 }
 function ifFieldEmpty(inputField) {
     if (inputField.value == '') {
-        alert('Type Valid Number Please Reload The Page ')
-        return;
+        alert('Input Field Is Empty & Auto Reload')
+        return window.location.reload();
     }
 }
 
@@ -55,19 +55,20 @@ document.getElementById('total-cost').addEventListener('click', function(){
     getTeamTotalCost.innerText = finalTotalCost;
 
 })
-
-document.getElementById('player-cost').addEventListener('click', function(){
-    const getPlayerCostField = document.getElementById('player-cost-field');
-    const getPlayerField = ifFieldEmpty(getPlayerCostField);
-
-})
 document.getElementById('total-cost').addEventListener('click', function(){
     const getTrainerCostField = document.getElementById('tainer-cost-field');
     const getTaineField = ifFieldEmpty(getTrainerCostField);
 })
-// document.getElementById('total-cost').addEventListener('click', function(){
-//     const getTrainerCostField = document.getElementById('coach-cost-field');
-//     const getTaineField = ifFieldEmpty(getTrainerCostField);
-// })
+document.getElementById('total-cost').addEventListener('click', function(){
+    const getTrainerCostField = document.getElementById('coach-cost-field');
+    const getTaineField = ifFieldEmpty(getTrainerCostField);
+
+})
+
+document.getElementById('player-cost').addEventListener('click', function(){
+    const getPlayerCostField = document.getElementById('player-cost-field');
+    const getPlayerField = ifFieldEmpty(getPlayerCostField);
+})
+
 
 
